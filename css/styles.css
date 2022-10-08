@@ -170,3 +170,31 @@ select {
   text-decoration: line-through;
   font-style: italic;
 }
+
+/*footer*/
+
+#copy-area {
+  background-color: transparent;
+  font-size: 10px;
+}
+
+#copy-area .container {
+  margin-top: 330px;
+  text-align: center;
+}
+
+#copy-area .container p {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+#copy-area .container a {
+  font-weight: bold;
+  color: #FFFF00;
+  text-decoration: none;
+}
+
+#copy-area .container a:hover {
+  text-decoration: none;
+  color: #3EC1D5;
+}
