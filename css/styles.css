@@ -199,19 +199,6 @@ select {
   color: #3EC1D5;
 }
 
-@media only screen and (min-width : 768px) {
-  .todo-container {
-    max-width: 450px;
-    margin: 3rem auto 0;
-    background-image: linear-gradient(45deg, #1C1C1C 0%, 	#008000 46%, 	#363636 100%);
-    filter: drop-shadow(0 0 0.5rem #FFD700);
-    border: 1px solid #fff;
-    padding: 1.5rem;
-    border-radius: 15px;
-    color: #fff;
-  }
-   
-}
 
 @media only screen and (max-width : 768px) {
   .todo-container {
@@ -222,7 +209,12 @@ select {
   button {
     padding: 0.2rem 0.3rem;
     font-size: 0.8rem;
-  }   
+  }
+
+  #copy-area {
+    font-size: 8px;
+    filter: drop-shadow(0 0 0.5rem #FFD700);
+  }
 }
 
 @media only screen and (max-width : 500px) {
@@ -234,7 +226,12 @@ select {
   button {
     padding: 0.2rem 0.3rem;
     font-size: 0.8rem;
-  }   
+  }
+
+  #copy-area {
+    font-size: 8px;
+    filter: drop-shadow(0 0 0.5rem #FFD700);
+  }
 }
 
 @media only screen and (max-width : 320px) {
@@ -246,7 +243,12 @@ select {
   button {
     padding: 0.2rem 0.3rem;
     font-size: 0.8rem;
-  }   
+  }
+
+  #copy-area {
+    font-size: 8px;
+    filter: drop-shadow(0 0 0.5rem #FFD700);
+  }
 }
 
 @media only screen and (max-width : 290px) {
@@ -258,5 +260,10 @@ select {
   button {
     padding: 0.2rem 0.3rem;
     font-size: 0.8rem;
-  }   
+  }
+
+  #copy-area {
+    font-size: 8px;
+    filter: drop-shadow(0 0 0.5rem #FFD700);
+  }
 }
