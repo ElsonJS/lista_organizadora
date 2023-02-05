@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista Organizada</title>
+    <title>Organize sua Lista</title>
     <link rel="shortcut icon" href="https://icons-for-free.com/iconfiles/png/512/text+number+list+ltr+regular-1330515566904247780.png">
     <link rel="stylesheet" href="css/styles.css" />
     <link
@@ -19,7 +19,8 @@
   <body>
     <div class="todo-container">
       <header>
-        <h1>Lista Organizada</h1>
+        <h1>Escreva sua Lista</h1>
+        <div class="loader"></div>
       </header>
       <form id="todo-form">
         <p>Comece sua lista:</p>
@@ -30,7 +31,7 @@
             placeholder="O que você vai fazer?"
           />
           <button type="submit">
-            <i class="fa-thin fa-plus"></i>
+            <i class="fa-thin fa-plus"style="color:red"></i>
           </button>
         </div>
       </form>
@@ -39,7 +40,7 @@
         <div class="form-control">
           <input type="text" id="edit-input" />
           <button type="submit">
-            <i class="fa-solid fa-check-double"></i>
+            <i class="fa-solid fa-check-double"style="color:red"></i>
           </button>
         </div>
         <button id="cancel-edit-btn">Cancelar</button>
@@ -48,9 +49,9 @@
         <div id="search">
           <h4>Pesquisar:</h4>
           <form>
-            <input type="text" id="search-input" placeholder="Buscar..." />
+            <input type="text" id="search-input" placeholder="Buscar..."/>
             <button id="erase-button">
-              <i class="fa-solid fa-delete-left"></i>
+              <i class="fa-solid fa-delete-left"style="color:red"></i>
             </button>
           </form>
         </div>

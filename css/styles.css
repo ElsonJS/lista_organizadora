@@ -1,22 +1,15 @@
 /* Geral */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Verdana;
-}
 
 body {
-  background-image: url(https://images.alphacoders.com/683/683731.jpg);
+  background-image: url(https://i.pinimg.com/originals/3b/d6/f6/3bd6f6c8a021bf6243450463e4f10f28.jpg);
   background-attachment: fixed;
-  height: 100vh
 }
 
 button {
   background-color: #fff;
   color: #102f5e;
   border: 2px solid #102f5e;
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.9rem;
   font-size: 1rem;
   cursor: pointer;
   display: flex;
@@ -40,13 +33,13 @@ button:hover > i {
 
 button i {
   pointer-events: none;
-  color: #102f5e;
+  color: red;
   font-weight: bold;
 }
 
 input,
 select {
-  padding: 0.25rem 0.5rem;
+  padding: 0.9rem 0.5rem;
 }
 
 .hide {
@@ -55,14 +48,13 @@ select {
 
 /* Todo Header */
 .todo-container {
-  max-width: 450px;
+  max-width: 600px;
   margin: 3rem auto 0;
-  /*background-image: linear-gradient(45deg, #1C1C1C 0%, 	#008000 46%, 	#363636 100%);*/
-  background-image: linear-gradient(to top,rgba(123, 214, 176, 0.8) 0,rgba(235, 217, 61, 0) 60%, rgba(13, 237, 245, 0.897) 100%);
-  filter: drop-shadow(0 0 0.5rem #FFD700);
+  background:#419eaa;
+  filter: drop-shadow(0 0 0.5rem red);
   border: 1px solid #fff;
   padding: 1.5rem;
-  border-radius: 15px;
+  border-radius: 20px;
   color: #fff;
 }
 
@@ -70,6 +62,43 @@ select {
   text-align: center;
   padding: 0 1rem 1rem;
   border-bottom: 1px solid #ccc;
+}
+
+.loader {
+  --height-of-loader: 4px;
+  --loader-color: #d85204;
+  width: 60%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+  top: -20px;
+  left: 105px;
+}
+ 
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 3s ease-in-out infinite;
+  ;
+}
+ 
+@keyframes moving {
+  50% {
+   width: 100%;
+  }
+ 
+  100% {
+   width: 0;
+   right: 0;
+   left: unset;
+  }
 }
 
 /* Todo Form */
@@ -150,6 +179,11 @@ select {
   padding: 1rem 1rem;
   border-bottom: 1px solid #ddd;
   transition: 0.3s;
+  background-color: #fff;
+  margin: 10px;
+  color: #000000;
+  font-weight: bold;
+  border-radius: 10px;  
 }
 
 .todo h3 {
@@ -162,13 +196,17 @@ select {
 }
 
 .done {
-  background: #395169;
+  background: greenyellow;
+  border-radius: 10px;
+  margin: 8px;
 }
 
 .done h3 {
-  color: #fff;
+  color: #000000;
   text-decoration: line-through;
   font-style: italic;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 /*footer*/
@@ -179,7 +217,7 @@ select {
 }
 
 #copy-area .container {
-  margin-top: 330px;
+  margin-top: 1000px;
   text-align: center;
 }
 
@@ -200,16 +238,36 @@ select {
 }
 
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 768px){
   .todo-container {
-    max-width: 300px;
-    font-size: 10px;  
+    width: 100%; 
+  }
+
+  .todo-container h1 {
+    font-size: 33px;
   }
 
   button {
-    padding: 0.2rem 0.3rem;
-    font-size: 0.8rem;
+    padding: 0.3rem 0.3rem;
+    font-size: 1rem;
   }
+
+  #copy-area {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width : 420px) {
+  .todo-container {
+    width: 350px;
+  }
+
+  .loader {
+    width: 65%;
+    top: -20px;
+    left: 60px;
+  }
+   
 
   #copy-area {
     font-size: 8px;
@@ -217,24 +275,7 @@ select {
   }
 }
 
-@media only screen and (max-width : 500px) {
-  .todo-container {
-    max-width: 300px;
-    font-size: 10px;  
-  }
-
-  button {
-    padding: 0.2rem 0.3rem;
-    font-size: 0.8rem;
-  }
-
-  #copy-area {
-    font-size: 8px;
-    filter: drop-shadow(0 0 0.5rem #FFD700);
-  }
-}
-
-@media only screen and (max-width : 320px) {
+/*@media only screen and (max-width : 320px) {
   .todo-container {
     max-width: 300px;
     font-size: 10px;  
@@ -266,4 +307,4 @@ select {
     font-size: 8px;
     filter: drop-shadow(0 0 0.5rem #FFD700);
   }
-}
+}*/

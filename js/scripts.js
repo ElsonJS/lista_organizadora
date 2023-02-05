@@ -22,7 +22,7 @@ const saveTodo = (text, done = 0, save = 1) => {
 
   const doneBtn = document.createElement("button");
   doneBtn.classList.add("finish-todo");
-  doneBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+  doneBtn.innerHTML = '<i class="fa-solid fa-check"</i>';
   todo.appendChild(doneBtn);
 
   const editBtn = document.createElement("button");
